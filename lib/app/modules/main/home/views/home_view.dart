@@ -4,10 +4,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:travelapp/app/data/constants/color_constants.dart';
 import 'package:travelapp/app/data/constants/style_constants.dart';
+import 'package:travelapp/app/data/model/Populars.dart';
 
 import '../controllers/home_controller.dart';
 import 'components/bannerTopMenu.dart';
 import 'components/bottomNavBar.dart';
+import 'components/popularSection.dart';
 import 'components/serviceSection.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -52,10 +54,11 @@ class HomeView extends GetView<HomeController> {
                   Container(
                     margin: EdgeInsets.symmetric(vertical: 15),
                     child: Text(
-                      "Popular Destination",
+                      "Popular Destination!",
                       style: mTitleStyle,
                     ),
                   ),
+                  PopularDestination(size: size)
                 ],
               ),
             )
